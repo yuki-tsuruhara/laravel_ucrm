@@ -1,15 +1,15 @@
 <script setup>
-import { Inertia } from '@inertiajs/inertia';
+import { Inertia } from "@inertiajs/inertia";
 defineProps({
     id: Number,
-    blog: Object
-})
+    blog: Object,
+});
 
-const deleteBlog = id => {
+const deleteBlog = (id) => {
     Inertia.delete(`/inertia/${id}`, {
-        onBefore: () => confirm('削除しても良いですか？')
-    })
-}
+        onBefore: () => confirm("削除しても良いですか？"),
+    });
+};
 </script>
 <template>
     <div>
