@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\InertiaTestController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('items', ItemController::class)
+->middleware(['auth', 'verified']);
+
+Route::resource('customers', CustomerController::class)
 ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
