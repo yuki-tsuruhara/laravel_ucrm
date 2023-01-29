@@ -95,7 +95,7 @@ const setCustomer = (e) => {
         </div>
     </div>
     <div class="flex justify-between">
-        <input type="text" v-model="searchInput" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        <input type="text" v-model="searchInput" placeholder="カタカナで入力してください" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
         <button @click="searchCustomers" data-micromodal-trigger="modal-1" href='javascript:' class="w-2/5 bg-blue-400 rounded text-white ml-4">検索する</button>
     </div>
 </template>
